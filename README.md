@@ -1,1 +1,1 @@
-AirBnB clone
+An AirBnB Console project
