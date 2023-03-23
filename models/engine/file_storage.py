@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import json
 
+
 class FileStorage:
 
     __file_path = "file.json"
@@ -21,8 +22,8 @@ class FileStorage:
         for k, v in self.__objects.items():
             json_dict[k] = v.to_dict()
         with open(self.__file_path, mode='w', encoding='utf-8') as f:
-            f.write(json.dumps(json_dict))
- 
+	f.write(json.dumps(json_dict))
+
     def classes(self):
         from models.base_model import BaseModel
         from models.city import City

@@ -3,6 +3,7 @@ import models
 from datetime import datetime
 from uuid import uuid4
 
+
 class BaseModel:
 
     def __init__(self, *args, **kwargs):
@@ -18,7 +19,6 @@ class BaseModel:
                     self.__dict__[k] = v
         else:
             models.storage.new(self)
-
 
     def __str__(self):
         return "[{}] ({}) {}".\
